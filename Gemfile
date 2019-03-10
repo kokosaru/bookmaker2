@@ -66,3 +66,5 @@ gem 'devise'
 gem 'activeadmin'
 gem 'inherited_resources'
 
+gem 'carrierwave'
+gem 'rmagick'

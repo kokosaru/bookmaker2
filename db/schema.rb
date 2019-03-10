@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_10_035122) do
+ActiveRecord::Schema.define(version: 2019_03_10_050529) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -43,6 +43,16 @@ ActiveRecord::Schema.define(version: 2019_03_10_035122) do
     t.integer "match_status"
     t.string "match_name"
     t.datetime "match_day"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.integer "match_id"
+    t.integer "team_number"
+    t.integer "pick_count", default: 0
+    t.string "team_name"
+    t.string "team_image_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
